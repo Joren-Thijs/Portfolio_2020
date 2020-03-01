@@ -1,5 +1,31 @@
 /*
     Author: Joren Thijs
 */
+body {
+    background-image: url('/images/beams.jpeg');
+    background-size: cover;
+    background-color: #444444;
+    background-blend-mode: multiply;
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+
+.annoncement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
+}
 
 /*# sourceMappingURL=maps/style.css.map */

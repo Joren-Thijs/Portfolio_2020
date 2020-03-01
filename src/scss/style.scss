@@ -1,3 +1,23 @@
 /*
     Author: Joren Thijs
 */
+
+body {
+    // Background
+    background-image: url('/images/beams.jpeg');
+    background-size: cover;
+    background-color: #444444;
+    background-blend-mode: multiply;
+
+    color: white;
+    font-family: 'Abel', sans-serif;
+}
+
+.annoncement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
+}
