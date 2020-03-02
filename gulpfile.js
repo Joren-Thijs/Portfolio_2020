@@ -1,21 +1,21 @@
 /**
  * @author Joren Thijs
- * @version V1.0
+ * @version V1.1
  *
  * @summary This gulp file contains all development and build tools for a standard website.
  * @description This file was made using Gulp V4.0.2.
  * It performs build tasks like compiling and hosting a dev server.
  * It also performs publish tasks like bundeling and minifying.
  *
- * @tutorial type gulp watch to start the dev environment.
- * type gulp release to bundle and minify project and export it into the dist folder.
+ * @tutorial type gulp <command> to use the toolset.
  *
- * @exports build Compile the sass into css
- * @exports watch Starts the dev server and watches for file changes
- * @exports release Compiles and minifys project and publishes to the dist folder
- * @exports releaseAll Cleares cache + Compiles and minifys project and publishes to the dist folder
- * @exports clearCache Cleares cache
- * @exports clearDist Deletes contents of the dist folder
+ * @exports build Compile the sass into css.
+ * @exports watch Starts the dev server and watches for file changes.
+ * @exports release Compiles and minifys project and publishes to the dist folder.
+ * @exports releaseAll Cleares cache + Compiles and minifys project and publishes to the dist folder.
+ * @exports clearCache Cleares cache.
+ * @exports clearDist Deletes contents of the dist folder.
+ * @exports deploy Deploy bundled output to remote server using rsync.
  */
 
 // Imports
@@ -32,8 +32,12 @@ const useref = require('gulp-useref');
 const gulpIf = require('gulp-if');
 const imageMin = require('gulp-imagemin');
 const cache = require('gulp-cache');
+const rsync = require('gulp-rsync');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+
+// Server configuration for deployment
+var deployConfiguration = require('./deploy.conf.json');
 
 /**
  * Configuration for the gulp-prettier formatter
@@ -150,6 +154,27 @@ function clearDist() {
 }
 
 /**
+ * Deploy bundled output to remote server using rsync.
+ */
+function deploy() {
+    return gulp.src('dist/**/*').pipe(
+        rsync({
+            root: 'dist/',
+            username: deployConfiguration.username,
+            hostname: deployConfiguration.hostname,
+            destination: deployConfiguration.destination,
+            port: deployConfiguration.port,
+            compress: deployConfiguration.compress,
+            chmod: deployConfiguration.chmod,
+            verbose: true,
+            progress: true,
+            silent: false,
+            archive: true,
+        })
+    );
+}
+
+/**
  * Starts the dev server and watches for file changes
  * @listens port 3000
  */
@@ -183,3 +208,4 @@ exports.releaseAll = gulp.series(
 );
 exports.clearCache = clearCache;
 exports.clearDist = clearDist;
+exports.deploy = deploy;

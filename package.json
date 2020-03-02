@@ -19,6 +19,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-line-ending-corrector": "^1.0.3",
     "gulp-prettier": "^2.3.0",
+    "gulp-rsync": "0.0.8",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-strip-json-comments": "^4.0.1",
