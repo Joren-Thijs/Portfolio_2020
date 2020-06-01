@@ -32,6 +32,10 @@ body {
     padding: 2.2em 3.6em;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .navigation {
     position: relative;
     display: flex;
@@ -43,12 +47,10 @@ body {
     margin-bottom: 2.5em;
 
     .hamburger {
-        cursor: pointer;
     }
 
     .github-mark {
         min-width: 35px;
-        cursor: pointer;
         filter: invert(42%) sepia(70%) saturate(5682%) hue-rotate(213deg) brightness(100%) contrast(103%);
     }
 }
@@ -81,7 +83,6 @@ h1, h2 {
 
 .learn-more {
     color: $primary-pink;
-    cursor: pointer;
     white-space: nowrap;
 }
 

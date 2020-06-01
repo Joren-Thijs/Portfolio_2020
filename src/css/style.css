@@ -7,6 +7,10 @@ body {
     padding: 2.2em 3.6em;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .navigation {
     position: relative;
     display: -webkit-box;
@@ -26,12 +30,8 @@ body {
     margin-right: -1.2em;
     margin-bottom: 2.5em;
 }
-.navigation .hamburger {
-    cursor: pointer;
-}
 .navigation .github-mark {
     min-width: 35px;
-    cursor: pointer;
     -webkit-filter: invert(42%) sepia(70%) saturate(5682%) hue-rotate(213deg)
         brightness(100%) contrast(103%);
     filter: invert(42%) sepia(70%) saturate(5682%) hue-rotate(213deg)
@@ -69,7 +69,6 @@ h2 {
 
 .learn-more {
     color: #fd2dee;
-    cursor: pointer;
     white-space: nowrap;
 }
 
