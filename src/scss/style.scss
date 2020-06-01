@@ -17,6 +17,7 @@ $text-colors: (
   @return map-get($text-colors, $color-name);
 }
 
+$max-width-mobile: 520px;
 $desktop: 800px;
 
 @mixin desktop {
@@ -57,13 +58,13 @@ body {
 }
 
 h1, h2 {
-    margin: 0.9em 0;
+    margin: 0.9em auto;
+    max-width: $max-width-mobile;
 }
 
 .main-title {
     color: #424242;
     font-size: 1.6em;
-    max-width: 265px;
     line-height: 1.5em;
 }
 
@@ -81,6 +82,7 @@ h1, h2 {
 .learn-more {
     color: $primary-pink;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .primary-action-large {
@@ -88,6 +90,7 @@ h1, h2 {
     font-size: 1.8em;
     text-align: center;
     margin: auto;
+    max-width: $max-width-mobile;
     line-height: 1.9em;
     border-radius: 25px;
     background: $primary-blue;
@@ -99,6 +102,8 @@ h1, h2 {
     border-radius: 25px;
     background: $primary-blue;
     background: linear-gradient(125deg, $primary-blue 0%, $primary-pink 100%);
+    margin: auto;
+    max-width: $max-width-mobile;
     padding: 2px;
     margin-bottom: 2.5em;
 
@@ -106,7 +111,6 @@ h1, h2 {
         color: textColor(secondary-button-text);
         font-size: 1.8em;
         text-align: center;
-        margin: auto;
         line-height: 1.9em;
         border-radius: 23px;
         background: white;
@@ -115,6 +119,8 @@ h1, h2 {
 
 .hero-image-container{
     position: relative;
+    max-width: $max-width-mobile;
+    margin: auto;
     .hero-image {
         width: 100%;
     }

@@ -46,13 +46,13 @@ body {
 
 h1,
 h2 {
-    margin: 0.9em 0;
+    margin: 0.9em auto;
+    max-width: 520px;
 }
 
 .main-title {
     color: #424242;
     font-size: 1.6em;
-    max-width: 265px;
     line-height: 1.5em;
 }
 
@@ -70,6 +70,7 @@ h2 {
 .learn-more {
     color: #fd2dee;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .primary-action-large {
@@ -77,6 +78,7 @@ h2 {
     font-size: 1.8em;
     text-align: center;
     margin: auto;
+    max-width: 520px;
     line-height: 1.9em;
     border-radius: 25px;
     background: #1f6aff;
@@ -88,6 +90,8 @@ h2 {
     border-radius: 25px;
     background: #1f6aff;
     background: linear-gradient(125deg, #1f6aff 0%, #fd2dee 100%);
+    margin: auto;
+    max-width: 520px;
     padding: 2px;
     margin-bottom: 2.5em;
 }
@@ -95,7 +99,6 @@ h2 {
     color: #1f6aff;
     font-size: 1.8em;
     text-align: center;
-    margin: auto;
     line-height: 1.9em;
     border-radius: 23px;
     background: white;
@@ -103,6 +106,8 @@ h2 {
 
 .hero-image-container {
     position: relative;
+    max-width: 520px;
+    margin: auto;
 }
 .hero-image-container .hero-image {
     width: 100%;
