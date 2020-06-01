@@ -77,8 +77,7 @@ h2 {
     font-size: 1.8em;
     text-align: center;
     margin: auto;
-    height: 50px;
-    line-height: 50px;
+    line-height: 1.9em;
     border-radius: 25px;
     background: #1f6aff;
     background: linear-gradient(125deg, #1f6aff 0%, #fd2dee 100%);
@@ -97,13 +96,24 @@ h2 {
     font-size: 1.8em;
     text-align: center;
     margin: auto;
-    line-height: 50px;
+    line-height: 1.9em;
     border-radius: 23px;
     background: white;
 }
 
-.hero-image {
+.hero-image-container {
+    position: relative;
+}
+.hero-image-container .hero-image {
     width: 100%;
+}
+.hero-image-container .hero-image-ref {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #7e7e7e;
+    position: absolute;
+    bottom: -1.5em;
+    right: 0;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
