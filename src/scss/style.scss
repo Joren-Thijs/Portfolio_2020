@@ -2,6 +2,29 @@
     Author: Joren Thijs
 */
 
+$primary-blue: #1F6AFF;
+$primary-pink: #FD2DEE;
+
+$text-colors: (
+  primary-text: #424242,
+  secondary-text: #6D6A6A,
+  faded-text: #7e7e7e,
+  primary-button-text: #FFFFFF,
+  secondary-button-text: $primary-blue
+);
+
+@function textColor($color-name) {
+  @return map-get($text-colors, $color-name);
+}
+
+$desktop: 800px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
 body {
     font-family: 'Muli', sans-serif;
     font-weight: 300;
@@ -45,42 +68,42 @@ h1, h2 {
 }
 
 .sub-title {
-    color: #6D6A6A;
+    color: textColor(secondary-text);
     font-size: 1.3em;
 }
 
 .introduction {
-    color: #6D6A6A;
+    color: textColor(secondary-text);
     font-size: 1em;
     margin-bottom: 2.5em;
 }
 
 .learn-more {
-    color: #FD2DEE;
+    color: $primary-pink;
     cursor: pointer;
 }
 
 .primary-action-large {
-    color: white;
+    color: textColor(primary-button-text);
     font-size: 1.8em;
     text-align: center;
     margin: auto;
     line-height: 1.9em;
     border-radius: 25px;
-    background: rgb(31,106,255);
-    background: linear-gradient(125deg, rgba(31,106,255,1) 0%, rgba(253,45,238,1) 100%);
+    background: $primary-blue;
+    background: linear-gradient(125deg, $primary-blue 0%, $primary-pink 100%);
     margin-bottom: .5em;
 }
 
 .secundairy-action-large-border {
     border-radius: 25px;
-    background: rgb(31,106,255);
-    background: linear-gradient(125deg, rgba(31,106,255,1) 0%, rgba(253,45,238,1) 100%);
+    background: $primary-blue;
+    background: linear-gradient(125deg, $primary-blue 0%, $primary-pink 100%);
     padding: 2px;
     margin-bottom: 2.5em;
 
     .secundairy-action-large {
-        color: #1F6AFF;
+        color: textColor(secondary-button-text);
         font-size: 1.8em;
         text-align: center;
         margin: auto;
@@ -99,7 +122,7 @@ h1, h2 {
     .hero-image-ref {
         font-size: .8em;
         text-decoration: none;
-        color: rgb(126, 126, 126);
+        color: textColor(faded-text);
         position: absolute;
         bottom: -1.5em;
         right: 0;
