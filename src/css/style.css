@@ -2,30 +2,108 @@
     Author: Joren Thijs
 */
 body {
-    background-image: url('/images/beams.jpeg');
-    background-size: cover;
-    background-color: #444444;
-    background-blend-mode: multiply;
-    color: white;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    padding: 2.2em 3.6em;
 }
 
-.annoncement {
+.navigation {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-size: 2em;
+    margin-left: -1.3em;
+    margin-right: -1.2em;
+    margin-bottom: 2.5em;
+}
+.navigation .hamburger {
+    cursor: pointer;
+}
+.navigation .github-mark {
+    min-width: 35px;
+    cursor: pointer;
+    -webkit-filter: invert(42%) sepia(70%) saturate(5682%) hue-rotate(213deg)
+        brightness(100%) contrast(103%);
+    filter: invert(42%) sepia(70%) saturate(5682%) hue-rotate(213deg)
+        brightness(100%) contrast(103%);
+}
+
+.flex-spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+h1,
+h2 {
+    margin: 0.9em 0;
+}
+
+.main-title {
+    color: #424242;
+    font-size: 1.6em;
+    max-width: 265px;
+    line-height: 1.5em;
+}
+
+.sub-title {
+    color: #6d6a6a;
+    font-size: 1.3em;
+}
+
+.introduction {
+    color: #6d6a6a;
+    font-size: 1em;
+    margin-bottom: 2.5em;
+}
+
+.learn-more {
+    color: #fd2dee;
+    cursor: pointer;
+}
+
+.primary-action-large {
+    color: white;
+    font-size: 1.8em;
     text-align: center;
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    background: #1f6aff;
+    background: linear-gradient(125deg, #1f6aff 0%, #fd2dee 100%);
+    margin-bottom: 0.5em;
+}
+
+.secundairy-action-large-border {
+    border-radius: 25px;
+    background: #1f6aff;
+    background: linear-gradient(125deg, #1f6aff 0%, #fd2dee 100%);
+    padding: 2px;
+    margin-bottom: 2.5em;
+}
+.secundairy-action-large-border .secundairy-action-large {
+    color: #1f6aff;
+    font-size: 1.8em;
+    text-align: center;
+    margin: auto;
+    line-height: 50px;
+    border-radius: 23px;
+    background: white;
+}
+
+.hero-image {
+    width: 100%;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

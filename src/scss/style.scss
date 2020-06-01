@@ -3,21 +3,95 @@
 */
 
 body {
-    // Background
-    background-image: url('/images/beams.jpeg');
-    background-size: cover;
-    background-color: #444444;
-    background-blend-mode: multiply;
-
-    color: white;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    padding: 2.2em 3.6em;
 }
 
-.annoncement {
+.navigation {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    font-size: 2em;
-    text-align: center;
+    margin-left: -1.3em;
+    margin-right: -1.2em;
+    margin-bottom: 2.5em;
+
+    .hamburger {
+        cursor: pointer;
+    }
+
+    .github-mark {
+        min-width: 35px;
+        cursor: pointer;
+        filter: invert(42%) sepia(70%) saturate(5682%) hue-rotate(213deg) brightness(100%) contrast(103%);
+    }
 }
+
+.flex-spacer {
+    flex: 1;
+}
+
+h1, h2 {
+    margin: 0.9em 0;
+}
+
+.main-title {
+    color: #424242;
+    font-size: 1.6em;
+    max-width: 265px;
+    line-height: 1.5em;
+}
+
+.sub-title {
+    color: #6D6A6A;
+    font-size: 1.3em;
+}
+
+.introduction {
+    color: #6D6A6A;
+    font-size: 1em;
+    margin-bottom: 2.5em;
+}
+
+.learn-more {
+    color: #FD2DEE;
+    cursor: pointer;
+}
+
+.primary-action-large {
+    color: white;
+    font-size: 1.8em;
+    text-align: center;
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    background: rgb(31,106,255);
+    background: linear-gradient(125deg, rgba(31,106,255,1) 0%, rgba(253,45,238,1) 100%);
+    margin-bottom: .5em;
+}
+
+.secundairy-action-large-border {
+    border-radius: 25px;
+    background: rgb(31,106,255);
+    background: linear-gradient(125deg, rgba(31,106,255,1) 0%, rgba(253,45,238,1) 100%);
+    padding: 2px;
+    margin-bottom: 2.5em;
+
+    .secundairy-action-large {
+        color: #1F6AFF;
+        font-size: 1.8em;
+        text-align: center;
+        margin: auto;
+        line-height: 50px;
+        border-radius: 23px;
+        background: white;
+    }
+}
+
+.hero-image {
+    width: 100%;
+}
+
