@@ -39,12 +39,25 @@ a {
     top: 3em;
     left: 50%;
     margin-left: -6em;
+    display: none;
 }
 .navigation .nav-items .nav-item {
+    text-align: center;
     list-style: none;
     margin: 0.4em auto;
     font-weight: 300;
     font-size: 2em;
+    position: relative;
+}
+.navigation .nav-items .nav-item.active-link::after {
+    position: absolute;
+    bottom: -0.1em;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    border-radius: 3px;
+    background: #1f6aff;
 }
 .navigation .github-mark {
     min-width: 35px;
@@ -56,6 +69,9 @@ a {
 
 .navigation.expanded {
     margin-bottom: 16em;
+}
+.navigation.expanded .nav-items {
+    display: unset;
 }
 
 .flex-spacer {
