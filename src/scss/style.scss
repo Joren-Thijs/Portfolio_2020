@@ -36,6 +36,10 @@ body {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
+
 .navigation {
     position: relative;
     display: flex;
@@ -49,10 +53,27 @@ body {
     .hamburger {
     }
 
+    .nav-items {
+        position: absolute;
+        top: 3em;
+        left: 50%;
+        margin-left: -6em;
+        .nav-item {
+            list-style: none;
+            margin: 0.4em auto;
+            font-weight: 300;
+            font-size: 2em;
+        }
+    }
+
     .github-mark {
         min-width: 35px;
         filter: invert(42%) sepia(70%) saturate(5682%) hue-rotate(213deg) brightness(100%) contrast(103%);
     }
+}
+
+.navigation.expanded {
+    margin-bottom: 16em;
 }
 
 .flex-spacer {
@@ -128,7 +149,6 @@ h1, h2 {
 
     .hero-image-ref {
         font-size: .8em;
-        text-decoration: none;
         color: textColor(faded-text);
         position: absolute;
         bottom: -1.5em;
