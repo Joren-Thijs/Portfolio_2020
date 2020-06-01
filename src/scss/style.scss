@@ -58,7 +58,11 @@ a {
         top: 3em;
         left: 50%;
         margin-left: -6em;
-        display: none;
+
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 150ms ease-in-out;
+
         .nav-item {
             text-align: center;
             list-style: none;
@@ -66,6 +70,7 @@ a {
             font-weight: 300;
             font-size: 2em;
             position: relative;
+            opacity: 0;
         }
 
         .nav-item.active-link::after {
@@ -77,6 +82,9 @@ a {
             height: 1.5px;
             border-radius: 3px;
             background: $primary-blue;
+            transform: scale(0, 1);
+            transform-origin: top;
+            transition: transform 300ms ease-in 200ms;
         }
     }
 
@@ -89,7 +97,15 @@ a {
 .navigation.expanded {
     margin-bottom: 16em;
     .nav-items {
-        display: unset;
+        transform: scale(1, 1);
+
+        .nav-item {
+            opacity: 1;
+            transition: opacity 150ms ease-in 250ms;
+        }
+        .nav-item.active-link::after {
+            transform: scale(1, 1);
+        }
     }
 }
 

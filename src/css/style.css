@@ -39,7 +39,14 @@ a {
     top: 3em;
     left: 50%;
     margin-left: -6em;
-    display: none;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: -webkit-transform 150ms ease-in-out;
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
 }
 .navigation .nav-items .nav-item {
     text-align: center;
@@ -48,6 +55,7 @@ a {
     font-weight: 300;
     font-size: 2em;
     position: relative;
+    opacity: 0;
 }
 .navigation .nav-items .nav-item.active-link::after {
     position: absolute;
@@ -58,6 +66,15 @@ a {
     height: 1.5px;
     border-radius: 3px;
     background: #1f6aff;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: -webkit-transform 300ms ease-in 200ms;
+    transition: -webkit-transform 300ms ease-in 200ms;
+    transition: transform 300ms ease-in 200ms;
+    transition: transform 300ms ease-in 200ms,
+        -webkit-transform 300ms ease-in 200ms;
 }
 .navigation .github-mark {
     min-width: 35px;
@@ -71,7 +88,17 @@ a {
     margin-bottom: 16em;
 }
 .navigation.expanded .nav-items {
-    display: unset;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+.navigation.expanded .nav-items .nav-item {
+    opacity: 1;
+    -webkit-transition: opacity 150ms ease-in 250ms;
+    transition: opacity 150ms ease-in 250ms;
+}
+.navigation.expanded .nav-items .nav-item.active-link::after {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
 }
 
 .flex-spacer {
