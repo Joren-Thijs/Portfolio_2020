@@ -34,6 +34,16 @@ a {
     margin-right: -1.2em;
     margin-bottom: 2.5em;
 }
+@media (min-width: 800px) {
+    .navigation {
+        height: 2em;
+    }
+}
+@media (min-width: 800px) {
+    .navigation .hamburger {
+        display: none;
+    }
+}
 .navigation .nav-items {
     position: absolute;
     top: 3em;
@@ -48,6 +58,28 @@ a {
     transition: transform 150ms ease-in-out;
     transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
 }
+@media (min-width: 800px) {
+    .navigation .nav-items {
+        position: relative;
+        top: unset;
+        left: unset;
+        margin-left: unset;
+        -webkit-transform: unset;
+        transform: unset;
+        -webkit-transition: unset;
+        transition: unset;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+}
 .navigation .nav-items .nav-item {
     text-align: center;
     list-style: none;
@@ -56,6 +88,13 @@ a {
     font-size: 2em;
     position: relative;
     opacity: 0;
+}
+@media (min-width: 800px) {
+    .navigation .nav-items .nav-item {
+        opacity: unset;
+        margin-right: 1.5em;
+        font-size: 1.5em;
+    }
 }
 .navigation .nav-items .nav-item.active-link::after {
     position: absolute;
@@ -75,6 +114,12 @@ a {
     transition: transform 300ms ease-in 200ms;
     transition: transform 300ms ease-in 200ms,
         -webkit-transform 300ms ease-in 200ms;
+}
+@media (min-width: 800px) {
+    .navigation .nav-items .nav-item.active-link::after {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
 }
 .navigation .github-mark {
     min-width: 35px;
@@ -105,6 +150,11 @@ a {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+}
+@media (min-width: 800px) {
+    .flex-spacer {
+        max-width: 500px;
+    }
 }
 
 h1,

@@ -50,7 +50,14 @@ a {
     margin-right: -1.2em;
     margin-bottom: 2.5em;
 
+    @include desktop() {
+        height: 2em;
+    }
+
     .hamburger {
+        @include desktop() {
+            display: none;
+        }
     }
 
     .nav-items {
@@ -63,6 +70,18 @@ a {
         transform-origin: top;
         transition: transform 150ms ease-in-out;
 
+        @include desktop() {
+            position: relative;
+            top: unset;
+            left: unset;
+            margin-left: unset;
+            transform: unset;
+            transition: unset;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
         .nav-item {
             text-align: center;
             list-style: none;
@@ -71,6 +90,11 @@ a {
             font-size: 2em;
             position: relative;
             opacity: 0;
+            @include desktop() {
+                opacity: unset;
+                margin-right: 1.5em;
+                font-size: 1.5em;
+            }
         }
 
         .nav-item.active-link::after {
@@ -85,6 +109,9 @@ a {
             transform: scale(0, 1);
             transform-origin: top;
             transition: transform 300ms ease-in 200ms;
+            @include desktop() {
+                transform: scale(1, 1);
+            }
         }
     }
 
@@ -111,6 +138,9 @@ a {
 
 .flex-spacer {
     flex: 1;
+    @include desktop() {
+        max-width: 500px;
+     }
 }
 
 h1, h2 {
