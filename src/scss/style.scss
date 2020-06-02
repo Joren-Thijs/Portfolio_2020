@@ -61,7 +61,7 @@ a {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 2.7em;
+    margin-top: 1.7em;
     margin-left: -1.4em;
     margin-right: -1.5em;
     margin-bottom: 1.3em;
@@ -69,6 +69,7 @@ a {
 
     @include desktop() {
         height: 2em;
+        margin-right: 0;
     }
 
     .hamburger {
@@ -115,7 +116,7 @@ a {
 
         .nav-item.active-link::after {
             position: absolute;
-            bottom: -0.1em;
+            bottom: -0.15em;
             left: 0;
             content: '';
             width: 100%;
@@ -215,7 +216,7 @@ a {
     background: $primary-blue;
     background: linear-gradient(125deg, $primary-blue 0%, $primary-pink 100%);
     @include desktop() {
-        font-size: 1.6em;
+        font-size: 1.2em;
         max-width: 9em;
         margin-left: 0;
     }
@@ -241,7 +242,7 @@ a {
         background: white;
         min-width: 8em;
         @include desktop() {
-            font-size: 1.6em;
+            font-size: 1.2em;
             max-width: 9em;
         }
     }

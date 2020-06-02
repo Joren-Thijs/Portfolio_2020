@@ -3,29 +3,53 @@
     display: grid;
     grid-template:
     'content' auto
-    'image' auto
     / auto;
+    @include desktop() {
+        margin-top: 5em;
+    }
 }
 
 .projects-main-title {
     font-weight: 300;
+    @include desktop() {
+        display: none;
+    }
 }
 
 .projects-project {
     margin-bottom: 3em;
+    @include desktop() {
+        display: grid;
+        grid-template:
+        'content image' auto
+        / minmax(10em, 27em) auto;
+    }
 
     .projects-project-title {
         font-weight: 300;
+        @include desktop() {
+            grid-area: content;
+            margin-top: 2em;
+        }
     }
 
     .projects-project-image {
         width: 100%;
         border-radius: 3px;
         border: 0.5px solid #969696;
+        @include desktop() {
+            grid-area: image;
+            margin-left: 2em;
+            max-width: 26em;
+        }
     }
 
     .projects-projects-description {
         color: textColor(secondary-text);
+        @include desktop() {
+            grid-area: content;
+            margin-top: 6em;
+        }
     }
 
     .projects-project-buttons {
@@ -33,6 +57,11 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
+        @include desktop() {
+            grid-area: content;
+            margin-top: 9em;
+            max-width: 25em;
+        }
     }
 }
 
