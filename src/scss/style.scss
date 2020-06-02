@@ -33,6 +33,11 @@ body {
 
 .container {
     margin: 1em 3.6em;
+    @include desktop() {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
 }
 
 .clickable {
@@ -56,6 +61,7 @@ a {
 
     @include desktop() {
         height: 2em;
+        margin-bottom: 5em;
     }
 
     .hamburger {
@@ -145,9 +151,28 @@ a {
 
 .flex-spacer {
     flex: 1;
+}
+
+.max-width-600 {
+    max-width: 600px;
+}
+
+.max-width-150 {
+    max-width: 150px;
+}
+
+.max-width-250 {
+    max-width: 7em;
+}
+
+.left-column {
     @include desktop() {
-        max-width: 600px;
-     }
+        max-width: 20em;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: flex-start;
+    }
 }
 
 h1, h2 {
@@ -159,17 +184,28 @@ h1, h2 {
     color: #424242;
     font-size: 1.6em;
     line-height: 1.5em;
+    @include desktop() {
+        font-size: 1.4em;
+        line-height: 1.3em;
+    }
 }
 
 .sub-title {
     color: textColor(secondary-text);
     font-size: 1.3em;
+    @include desktop() {
+        font-size: 1.1em;
+        margin-left: 0;
+    }
 }
 
 .introduction {
     color: textColor(secondary-text);
     font-size: 1em;
     margin-bottom: 2.5em;
+    @include desktop() {
+        font-size: .8em;
+    }
 }
 
 .learn-more {
@@ -188,6 +224,11 @@ h1, h2 {
     background: $primary-blue;
     background: linear-gradient(125deg, $primary-blue 0%, $primary-pink 100%);
     margin-bottom: .5em;
+    @include desktop() {
+        font-size: 1.6em;
+        max-width: 9em;
+        margin-left: 0;
+    }
 }
 
 .secundairy-action-large-border {
@@ -198,6 +239,10 @@ h1, h2 {
     max-width: $max-width-mobile;
     padding: 2px;
     margin-bottom: 2.5em;
+    @include desktop() {
+        max-width: 14em;
+        margin-left: 0;
+    }
 
     .secundairy-action-large {
         color: textColor(secondary-button-text);
@@ -206,6 +251,10 @@ h1, h2 {
         line-height: 1.9em;
         border-radius: 23px;
         background: white;
+        @include desktop() {
+            font-size: 1.6em;
+            max-width: 9em;
+        }
     }
 }
 
@@ -213,8 +262,14 @@ h1, h2 {
     position: relative;
     max-width: $max-width-mobile;
     margin: auto;
+    @include desktop() {
+        max-width: unset;
+    }
     .hero-image {
         width: 100%;
+        @include desktop() {
+            width: 20em;
+        }
     }
 
     .hero-image-ref {

@@ -9,6 +9,20 @@ body {
 .container {
     margin: 1em 3.6em;
 }
+@media (min-width: 800px) {
+    .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+}
 
 .clickable {
     cursor: pointer;
@@ -41,6 +55,7 @@ a {
 @media (min-width: 800px) {
     .navigation {
         height: 2em;
+        margin-bottom: 5em;
     }
 }
 @media (min-width: 800px) {
@@ -160,9 +175,35 @@ a {
     -ms-flex: 1;
     flex: 1;
 }
+
+.max-width-600 {
+    max-width: 600px;
+}
+
+.max-width-150 {
+    max-width: 150px;
+}
+
+.max-width-250 {
+    max-width: 7em;
+}
+
 @media (min-width: 800px) {
-    .flex-spacer {
-        max-width: 600px;
+    .left-column {
+        max-width: 20em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: initial;
+        -ms-flex-align: initial;
+        align-items: initial;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
     }
 }
 
@@ -177,16 +218,33 @@ h2 {
     font-size: 1.6em;
     line-height: 1.5em;
 }
+@media (min-width: 800px) {
+    .main-title {
+        font-size: 1.4em;
+        line-height: 1.3em;
+    }
+}
 
 .sub-title {
     color: #6d6a6a;
     font-size: 1.3em;
+}
+@media (min-width: 800px) {
+    .sub-title {
+        font-size: 1.1em;
+        margin-left: 0;
+    }
 }
 
 .introduction {
     color: #6d6a6a;
     font-size: 1em;
     margin-bottom: 2.5em;
+}
+@media (min-width: 800px) {
+    .introduction {
+        font-size: 0.8em;
+    }
 }
 
 .learn-more {
@@ -206,6 +264,13 @@ h2 {
     background: linear-gradient(125deg, #1f6aff 0%, #fd2dee 100%);
     margin-bottom: 0.5em;
 }
+@media (min-width: 800px) {
+    .primary-action-large {
+        font-size: 1.6em;
+        max-width: 9em;
+        margin-left: 0;
+    }
+}
 
 .secundairy-action-large-border {
     border-radius: 25px;
@@ -216,6 +281,12 @@ h2 {
     padding: 2px;
     margin-bottom: 2.5em;
 }
+@media (min-width: 800px) {
+    .secundairy-action-large-border {
+        max-width: 14em;
+        margin-left: 0;
+    }
+}
 .secundairy-action-large-border .secundairy-action-large {
     color: #1f6aff;
     font-size: 1.8em;
@@ -224,14 +295,30 @@ h2 {
     border-radius: 23px;
     background: white;
 }
+@media (min-width: 800px) {
+    .secundairy-action-large-border .secundairy-action-large {
+        font-size: 1.6em;
+        max-width: 9em;
+    }
+}
 
 .hero-image-container {
     position: relative;
     max-width: 520px;
     margin: auto;
 }
+@media (min-width: 800px) {
+    .hero-image-container {
+        max-width: unset;
+    }
+}
 .hero-image-container .hero-image {
     width: 100%;
+}
+@media (min-width: 800px) {
+    .hero-image-container .hero-image {
+        width: 20em;
+    }
 }
 .hero-image-container .hero-image-ref {
     font-size: 0.8em;
