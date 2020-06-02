@@ -29,14 +29,26 @@ $desktop: 800px;
 body {
     font-family: 'Muli', sans-serif;
     font-weight: 300;
+    display: grid;
+    grid-template:
+    '. navbar .' 2em
+    '. container .' auto
+    / minmax(3.6em, 1fr) auto minmax(3.6em, 1fr);
 }
 
 .container {
-    margin: 1em 3.6em;
+    margin-top: 2.5em;
+    grid-area: container;
+    display: grid;
+    grid-template:
+    'content' auto
+    'image' auto
+    / auto;
     @include desktop() {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        margin-top: 7.5em;
+        grid-template:
+        'content . image' auto
+        / auto minmax(0.5em, 15em) auto;
     }
 }
 
@@ -49,14 +61,15 @@ a {
 }
 
 .navigation {
+    grid-area: navbar;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 1.5em;
-    margin-left: 2.3em;
-    margin-right: 2.4em;
+    margin-top: 2.7em;
+    margin-left: -1.4em;
+    margin-right: -1.5em;
     margin-bottom: 2.5em;
 
     @include desktop() {
@@ -166,8 +179,9 @@ a {
 }
 
 .left-column {
+    grid-area: content;
     @include desktop() {
-        max-width: 20em;
+        max-width: 23em;
         display: flex;
         flex-direction: column;
         align-items: initial;
@@ -178,23 +192,21 @@ a {
 h1, h2 {
     margin: 0.9em auto;
     max-width: $max-width-mobile;
+    @include desktop() {
+        margin: 0.6em auto;
+    }
 }
 
 .main-title {
     color: #424242;
     font-size: 1.6em;
     line-height: 1.5em;
-    @include desktop() {
-        font-size: 1.4em;
-        line-height: 1.3em;
-    }
 }
 
 .sub-title {
     color: textColor(secondary-text);
     font-size: 1.3em;
     @include desktop() {
-        font-size: 1.1em;
         margin-left: 0;
     }
 }
@@ -203,9 +215,6 @@ h1, h2 {
     color: textColor(secondary-text);
     font-size: 1em;
     margin-bottom: 2.5em;
-    @include desktop() {
-        font-size: .8em;
-    }
 }
 
 .learn-more {
@@ -259,6 +268,7 @@ h1, h2 {
 }
 
 .hero-image-container{
+    grid-area: image;
     position: relative;
     max-width: $max-width-mobile;
     margin: auto;
@@ -268,7 +278,7 @@ h1, h2 {
     .hero-image {
         width: 100%;
         @include desktop() {
-            width: 20em;
+            width: 22em;
         }
     }
 

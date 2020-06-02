@@ -4,23 +4,23 @@
 body {
     font-family: 'Muli', sans-serif;
     font-weight: 300;
+    display: grid;
+    grid-template: '. navbar .' 2em '. container .' auto/minmax(3.6em, 1fr) auto minmax(
+            3.6em,
+            1fr
+        );
 }
 
 .container {
-    margin: 1em 3.6em;
+    margin-top: 2.5em;
+    grid-area: container;
+    display: grid;
+    grid-template: 'content' auto 'image' auto / auto;
 }
 @media (min-width: 800px) {
     .container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
+        margin-top: 7.5em;
+        grid-template: 'content . image' auto/auto minmax(0.5em, 15em) auto;
     }
 }
 
@@ -33,6 +33,7 @@ a {
 }
 
 .navigation {
+    grid-area: navbar;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -47,9 +48,9 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 1.5em;
-    margin-left: 2.3em;
-    margin-right: 2.4em;
+    margin-top: 2.7em;
+    margin-left: -1.4em;
+    margin-right: -1.5em;
     margin-bottom: 2.5em;
 }
 @media (min-width: 800px) {
@@ -188,9 +189,12 @@ a {
     max-width: 7em;
 }
 
+.left-column {
+    grid-area: content;
+}
 @media (min-width: 800px) {
     .left-column {
-        max-width: 20em;
+        max-width: 23em;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -212,17 +216,17 @@ h2 {
     margin: 0.9em auto;
     max-width: 520px;
 }
+@media (min-width: 800px) {
+    h1,
+    h2 {
+        margin: 0.6em auto;
+    }
+}
 
 .main-title {
     color: #424242;
     font-size: 1.6em;
     line-height: 1.5em;
-}
-@media (min-width: 800px) {
-    .main-title {
-        font-size: 1.4em;
-        line-height: 1.3em;
-    }
 }
 
 .sub-title {
@@ -231,7 +235,6 @@ h2 {
 }
 @media (min-width: 800px) {
     .sub-title {
-        font-size: 1.1em;
         margin-left: 0;
     }
 }
@@ -240,11 +243,6 @@ h2 {
     color: #6d6a6a;
     font-size: 1em;
     margin-bottom: 2.5em;
-}
-@media (min-width: 800px) {
-    .introduction {
-        font-size: 0.8em;
-    }
 }
 
 .learn-more {
@@ -303,6 +301,7 @@ h2 {
 }
 
 .hero-image-container {
+    grid-area: image;
     position: relative;
     max-width: 520px;
     margin: auto;
@@ -317,7 +316,7 @@ h2 {
 }
 @media (min-width: 800px) {
     .hero-image-container .hero-image {
-        width: 20em;
+        width: 22em;
     }
 }
 .hero-image-container .hero-image-ref {
