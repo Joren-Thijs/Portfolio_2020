@@ -37,7 +37,6 @@ body {
 }
 
 .container {
-    margin-top: 2.5em;
     grid-area: container;
     display: grid;
     grid-template:
@@ -58,6 +57,16 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
+    &:visited {
+        color: inherit;
+    }
+    &:hover {
+        color: $primary-blue;
+    }
+    &:active {
+        color: inherit;
+    }
 }
 
 .navigation {
@@ -70,7 +79,7 @@ a {
     margin-top: 2.7em;
     margin-left: -1.4em;
     margin-right: -1.5em;
-    margin-bottom: -26em;
+    margin-bottom: 1.3em;
     max-height: 2em;
 
     @include desktop() {
@@ -219,6 +228,9 @@ h1, h2 {
 .learn-more {
     color: $primary-pink;
     white-space: nowrap;
+    &:hover {
+        color: $primary-blue;
+    }
 }
 
 .primary-action-large {
@@ -269,8 +281,6 @@ h1, h2 {
 .hero-image-container{
     grid-area: image;
     position: relative;
-    max-width: $max-width-mobile;
-    margin: auto;
     @include desktop() {
         max-width: unset;
     }

@@ -12,7 +12,6 @@ body {
 }
 
 .container {
-    margin-top: 2.5em;
     grid-area: container;
     display: grid;
     grid-template: 'content' auto 'image' auto / auto;
@@ -30,6 +29,16 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    color: inherit;
+}
+a:hover {
+    color: #1f6aff;
+}
+a:active {
+    color: inherit;
 }
 
 .navigation {
@@ -51,7 +60,7 @@ a {
     margin-top: 2.7em;
     margin-left: -1.4em;
     margin-right: -1.5em;
-    margin-bottom: -26em;
+    margin-bottom: 1.3em;
     max-height: 2em;
 }
 @media (min-width: 800px) {
@@ -249,6 +258,9 @@ h2 {
     color: #fd2dee;
     white-space: nowrap;
 }
+.learn-more:hover {
+    color: #1f6aff;
+}
 
 .primary-action-large {
     color: #ffffff;
@@ -303,8 +315,6 @@ h2 {
 .hero-image-container {
     grid-area: image;
     position: relative;
-    max-width: 520px;
-    margin: auto;
 }
 @media (min-width: 800px) {
     .hero-image-container {
