@@ -9,8 +9,10 @@
     }
 }
 
-
-h1, h2 {
+.home-main-title {
+    color: #424242;
+    font-size: 1.6em;
+    line-height: 1.5em;
     margin: 0.9em auto;
     max-width: $max-width-mobile;
     @include desktop() {
@@ -18,16 +20,13 @@ h1, h2 {
     }
 }
 
-.home-main-title {
-    color: #424242;
-    font-size: 1.6em;
-    line-height: 1.5em;
-}
-
 .home-sub-title {
     color: textColor(secondary-text);
     font-size: 1.3em;
+    margin: 0.9em auto;
+    max-width: $max-width-mobile;
     @include desktop() {
+        margin: 0.6em auto;
         margin-left: 0;
     }
 }
@@ -36,6 +35,11 @@ h1, h2 {
     color: textColor(secondary-text);
     font-size: 1em;
     margin-bottom: 2.5em;
+    margin: 0.9em auto;
+    max-width: $max-width-mobile;
+    @include desktop() {
+        margin: 0.6em auto;
+    }
 }
 
 .home-learn-more {
