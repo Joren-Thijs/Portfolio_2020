@@ -492,4 +492,111 @@ a:active {
     }
 }
 
+.about-container {
+    grid-area: container;
+    display: grid;
+    grid-template: 'content' auto 'image' auto / auto;
+}
+@media (min-width: 800px) {
+    .about-container {
+        margin-top: 6em;
+        grid-template: 'content . image' auto/auto minmax(0.5em, 15em) auto;
+    }
+}
+
+.about-main-title {
+    font-weight: 300;
+}
+@media (min-width: 800px) {
+    .about-main-title {
+        display: none;
+    }
+}
+
+.about-left-column {
+    grid-area: content;
+}
+@media (min-width: 800px) {
+    .about-left-column {
+        max-width: 23em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: initial;
+        -ms-flex-align: initial;
+        align-items: initial;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+}
+
+.about-main-title {
+    color: #424242;
+    font-size: 1.6em;
+    line-height: 1.5em;
+    margin: 0.9em auto;
+    max-width: 520px;
+}
+@media (min-width: 800px) {
+    .about-main-title {
+        margin: 0.6em auto;
+    }
+}
+
+.about-sub-title {
+    color: #6d6a6a;
+    font-size: 1.3em;
+    margin: 0.9em auto;
+    max-width: 520px;
+}
+@media (min-width: 800px) {
+    .about-sub-title {
+        margin: 0.6em auto;
+        margin-left: 0;
+    }
+}
+
+.about-introduction {
+    color: #6d6a6a;
+    font-size: 1em;
+    margin-bottom: 2.5em;
+    margin: 0.9em auto;
+    max-width: 520px;
+}
+@media (min-width: 800px) {
+    .about-introduction {
+        margin: 0.6em auto;
+    }
+}
+
+.about-hero-image-container {
+    grid-area: image;
+    position: relative;
+}
+@media (min-width: 800px) {
+    .about-hero-image-container {
+        max-width: unset;
+    }
+}
+.about-hero-image-container .about-hero-image {
+    width: 100%;
+}
+@media (min-width: 800px) {
+    .about-hero-image-container .about-hero-image {
+        width: 22em;
+    }
+}
+.about-hero-image-container .about-hero-image-ref {
+    font-size: 0.8em;
+    color: #7e7e7e;
+    position: absolute;
+    bottom: -1.5em;
+    right: 0;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
