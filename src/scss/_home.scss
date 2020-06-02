@@ -1,4 +1,4 @@
-.left-column {
+.home-left-column {
     grid-area: content;
     @include desktop() {
         max-width: 23em;
@@ -18,13 +18,13 @@ h1, h2 {
     }
 }
 
-.main-title {
+.home-main-title {
     color: #424242;
     font-size: 1.6em;
     line-height: 1.5em;
 }
 
-.sub-title {
+.home-sub-title {
     color: textColor(secondary-text);
     font-size: 1.3em;
     @include desktop() {
@@ -32,13 +32,13 @@ h1, h2 {
     }
 }
 
-.introduction {
+.home-introduction {
     color: textColor(secondary-text);
     font-size: 1em;
     margin-bottom: 2.5em;
 }
 
-.learn-more {
+.home-learn-more {
     color: $primary-pink;
     white-space: nowrap;
     &:hover {
@@ -46,20 +46,20 @@ h1, h2 {
     }
 }
 
-.hero-image-container{
+.home-hero-image-container{
     grid-area: image;
     position: relative;
     @include desktop() {
         max-width: unset;
     }
-    .hero-image {
+    .home-hero-image {
         width: 100%;
         @include desktop() {
             width: 22em;
         }
     }
 
-    .hero-image-ref {
+    .home-hero-image-ref {
         font-size: .8em;
         color: textColor(faded-text);
         position: absolute;
