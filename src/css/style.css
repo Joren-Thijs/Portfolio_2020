@@ -405,20 +405,20 @@ a:active {
 @media (min-width: 800px) {
     .projects-project {
         display: grid;
-        grid-template: 'content image' auto/minmax(10em, 27em) minmax(
+        grid-template: '. image' 1fr 'content-title image' auto 'content-description image' auto 'content-buttons image' auto '. image' 1fr / minmax(
                 10em,
-                27em
-            );
+                25.5em
+            ) minmax(10em, 25.5em);
         margin-bottom: 7em;
     }
 }
 @media (min-width: 800px) {
     .projects-project.mirrored {
         display: grid;
-        grid-template: 'image content' auto/minmax(10em, 27em) minmax(
+        grid-template: 'image .' 1fr 'image content-title' auto 'image content-description' auto 'image content-buttons' auto 'image .' 1fr / minmax(
                 10em,
                 27em
-            );
+            ) minmax(10em, 27em);
     }
 }
 @media (min-width: 800px) {
@@ -447,8 +447,7 @@ a:active {
 }
 @media (min-width: 800px) {
     .projects-project .projects-project-title {
-        grid-area: content;
-        margin-top: 2em;
+        grid-area: content-title;
     }
 }
 .projects-project .projects-project-image {
@@ -459,7 +458,7 @@ a:active {
 @media (min-width: 800px) {
     .projects-project .projects-project-image {
         grid-area: image;
-        margin-left: 3em;
+        margin-left: 2.5em;
         max-width: 26em;
     }
 }
@@ -468,8 +467,7 @@ a:active {
 }
 @media (min-width: 800px) {
     .projects-project .projects-projects-description {
-        grid-area: content;
-        margin-top: 6em;
+        grid-area: content-description;
     }
 }
 .projects-project .projects-project-buttons {
@@ -489,8 +487,7 @@ a:active {
 }
 @media (min-width: 800px) {
     .projects-project .projects-project-buttons {
-        grid-area: content;
-        margin-top: 10em;
+        grid-area: content-buttons;
         max-width: 25em;
     }
 }

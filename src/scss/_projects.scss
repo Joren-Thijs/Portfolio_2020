@@ -21,8 +21,12 @@
     @include desktop() {
         display: grid;
         grid-template:
-        'content image' auto
-        / minmax(10em, 27em) minmax(10em, 27em);
+        '. image' 1fr
+        'content-title image' auto
+        'content-description image' auto
+        'content-buttons image' auto
+        '. image' 1fr
+        / minmax(10em, 25.5em) minmax(10em, 25.5em);
         margin-bottom: 7em;
     }
 
@@ -30,7 +34,11 @@
         @include desktop() {
             display: grid;
             grid-template:
-            'image content' auto
+            'image .' 1fr
+            'image content-title' auto
+            'image content-description' auto
+            'image content-buttons' auto
+            'image .' 1fr
             / minmax(10em, 27em) minmax(10em, 27em);
         }
 
@@ -63,8 +71,7 @@
     .projects-project-title {
         font-weight: 300;
         @include desktop() {
-            grid-area: content;
-            margin-top: 2em;
+            grid-area: content-title;
         }
     }
 
@@ -74,7 +81,7 @@
         border: 0.5px solid #969696;
         @include desktop() {
             grid-area: image;
-            margin-left: 3em;
+            margin-left: 2.5em;
             max-width: 26em;
         }
     }
@@ -82,8 +89,7 @@
     .projects-projects-description {
         color: textColor(secondary-text);
         @include desktop() {
-            grid-area: content;
-            margin-top: 6em;
+            grid-area: content-description
         }
     }
 
@@ -93,8 +99,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         @include desktop() {
-            grid-area: content;
-            margin-top: 10em;
+            grid-area: content-buttons;
             max-width: 25em;
         }
     }
