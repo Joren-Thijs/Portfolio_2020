@@ -22,7 +22,42 @@
         display: grid;
         grid-template:
         'content image' auto
-        / minmax(10em, 27em) auto;
+        / minmax(10em, 27em) minmax(10em, 27em);
+        margin-bottom: 7em;
+    }
+
+    &.mirrored {
+        @include desktop() {
+            display: grid;
+            grid-template:
+            'image content' auto
+            / minmax(10em, 27em) minmax(10em, 27em);
+        }
+
+        .projects-project-title {
+            @include desktop() {
+                margin-left: 2em;
+            }
+        }
+
+        .projects-projects-description {
+            @include desktop() {
+                margin-left: 3em;
+            }
+        }
+
+        .projects-project-buttons {
+            @include desktop() {
+                margin-left: 3em;
+            }
+        }
+
+        .projects-project-image {
+            @include desktop() {
+                grid-area: image;
+                margin-left: 0;
+            }
+        }
     }
 
     .projects-project-title {
@@ -39,7 +74,7 @@
         border: 0.5px solid #969696;
         @include desktop() {
             grid-area: image;
-            margin-left: 2em;
+            margin-left: 3em;
             max-width: 26em;
         }
     }
@@ -59,7 +94,7 @@
         align-items: flex-start;
         @include desktop() {
             grid-area: content;
-            margin-top: 9em;
+            margin-top: 10em;
             max-width: 25em;
         }
     }

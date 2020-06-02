@@ -405,7 +405,41 @@ a:active {
 @media (min-width: 800px) {
     .projects-project {
         display: grid;
-        grid-template: 'content image' auto/minmax(10em, 27em) auto;
+        grid-template: 'content image' auto/minmax(10em, 27em) minmax(
+                10em,
+                27em
+            );
+        margin-bottom: 7em;
+    }
+}
+@media (min-width: 800px) {
+    .projects-project.mirrored {
+        display: grid;
+        grid-template: 'image content' auto/minmax(10em, 27em) minmax(
+                10em,
+                27em
+            );
+    }
+}
+@media (min-width: 800px) {
+    .projects-project.mirrored .projects-project-title {
+        margin-left: 2em;
+    }
+}
+@media (min-width: 800px) {
+    .projects-project.mirrored .projects-projects-description {
+        margin-left: 3em;
+    }
+}
+@media (min-width: 800px) {
+    .projects-project.mirrored .projects-project-buttons {
+        margin-left: 3em;
+    }
+}
+@media (min-width: 800px) {
+    .projects-project.mirrored .projects-project-image {
+        grid-area: image;
+        margin-left: 0;
     }
 }
 .projects-project .projects-project-title {
@@ -425,7 +459,7 @@ a:active {
 @media (min-width: 800px) {
     .projects-project .projects-project-image {
         grid-area: image;
-        margin-left: 2em;
+        margin-left: 3em;
         max-width: 26em;
     }
 }
@@ -456,7 +490,7 @@ a:active {
 @media (min-width: 800px) {
     .projects-project .projects-project-buttons {
         grid-area: content;
-        margin-top: 9em;
+        margin-top: 10em;
         max-width: 25em;
     }
 }
