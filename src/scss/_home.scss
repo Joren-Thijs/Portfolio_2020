@@ -1,3 +1,18 @@
+.home-container {
+    grid-area: container;
+    display: grid;
+    grid-template:
+    'content' auto
+    'image' auto
+    / auto;
+    @include desktop() {
+        margin-top: 6em;
+        grid-template:
+        'content . image' auto
+        / auto minmax(0.5em, 15em) auto;
+    }
+}
+
 .home-left-column {
     grid-area: content;
     @include desktop() {

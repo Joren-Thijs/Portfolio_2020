@@ -36,21 +36,6 @@ body {
     / minmax(3.6em, 1fr) auto minmax(3.6em, 1fr);
 }
 
-.container {
-    grid-area: container;
-    display: grid;
-    grid-template:
-    'content' auto
-    'image' auto
-    / auto;
-    @include desktop() {
-        margin-top: 6em;
-        grid-template:
-        'content . image' auto
-        / auto minmax(0.5em, 15em) auto;
-    }
-}
-
 .clickable {
     cursor: pointer;
 }
