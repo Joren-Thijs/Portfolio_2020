@@ -153,7 +153,7 @@ a {
 }
 
 .navigation.expanded {
-    margin-bottom: 13em;
+    margin-bottom: 15em;
     @include desktop() {
         margin-bottom: unset;
     }
@@ -212,6 +212,49 @@ a {
         line-height: 1.9em;
         border-radius: 23px;
         background: white;
+        @include desktop() {
+            font-size: 1.6em;
+            max-width: 9em;
+        }
+    }
+}
+
+.primary-action-small {
+    color: textColor(primary-button-text);
+    font-size: 1em;
+    text-align: center;
+    max-width: $max-width-mobile;
+    min-width: 8em;
+    line-height: 1.9em;
+    border-radius: 25px;
+    background: $primary-blue;
+    background: linear-gradient(125deg, $primary-blue 0%, $primary-pink 100%);
+    @include desktop() {
+        font-size: 1.6em;
+        max-width: 9em;
+        margin-left: 0;
+    }
+}
+
+.secundairy-action-small-border {
+    border-radius: 25px;
+    background: $primary-blue;
+    background: linear-gradient(125deg, $primary-blue 0%, $primary-pink 100%);
+    max-width: $max-width-mobile;
+    padding: 2px;
+    @include desktop() {
+        max-width: 14em;
+        margin-left: 0;
+    }
+
+    .secundairy-action-small {
+        color: textColor(secondary-button-text);
+        font-size: 1em;
+        text-align: center;
+        line-height: 1.9em;
+        border-radius: 23px;
+        background: white;
+        min-width: 8em;
         @include desktop() {
             font-size: 1.6em;
             max-width: 9em;

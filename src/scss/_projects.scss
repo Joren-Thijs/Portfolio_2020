@@ -1,3 +1,29 @@
-.projects-project-image {
-    width: 100%;
+.projects-main-title {
+    font-weight: 300;
 }
+
+.projects-project {
+    margin-bottom: 3em;
+
+    .projects-project-title {
+        font-weight: 300;
+    }
+
+    .projects-project-image {
+        width: 100%;
+        border-radius: 3px;
+        border: 0.5px solid #969696;
+    }
+
+    .projects-projects-description {
+        color: textColor(secondary-text);
+    }
+
+    .projects-project-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+

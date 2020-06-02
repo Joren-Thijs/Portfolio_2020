@@ -159,7 +159,7 @@ a:active {
 }
 
 .navigation.expanded {
-    margin-bottom: 13em;
+    margin-bottom: 15em;
 }
 @media (min-width: 800px) {
     .navigation.expanded {
@@ -231,6 +231,54 @@ a:active {
 }
 @media (min-width: 800px) {
     .secundairy-action-large-border .secundairy-action-large {
+        font-size: 1.6em;
+        max-width: 9em;
+    }
+}
+
+.primary-action-small {
+    color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+    max-width: 520px;
+    min-width: 8em;
+    line-height: 1.9em;
+    border-radius: 25px;
+    background: #1f6aff;
+    background: linear-gradient(125deg, #1f6aff 0%, #fd2dee 100%);
+}
+@media (min-width: 800px) {
+    .primary-action-small {
+        font-size: 1.6em;
+        max-width: 9em;
+        margin-left: 0;
+    }
+}
+
+.secundairy-action-small-border {
+    border-radius: 25px;
+    background: #1f6aff;
+    background: linear-gradient(125deg, #1f6aff 0%, #fd2dee 100%);
+    max-width: 520px;
+    padding: 2px;
+}
+@media (min-width: 800px) {
+    .secundairy-action-small-border {
+        max-width: 14em;
+        margin-left: 0;
+    }
+}
+.secundairy-action-small-border .secundairy-action-small {
+    color: #1f6aff;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.9em;
+    border-radius: 23px;
+    background: white;
+    min-width: 8em;
+}
+@media (min-width: 800px) {
+    .secundairy-action-small-border .secundairy-action-small {
         font-size: 1.6em;
         max-width: 9em;
     }
@@ -330,8 +378,38 @@ a:active {
     right: 0;
 }
 
-.projects-project-image {
+.projects-main-title {
+    font-weight: 300;
+}
+
+.projects-project {
+    margin-bottom: 3em;
+}
+.projects-project .projects-project-title {
+    font-weight: 300;
+}
+.projects-project .projects-project-image {
     width: 100%;
+    border-radius: 3px;
+    border: 0.5px solid #969696;
+}
+.projects-project .projects-projects-description {
+    color: #6d6a6a;
+}
+.projects-project .projects-project-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
