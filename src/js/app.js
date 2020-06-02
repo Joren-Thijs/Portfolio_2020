@@ -17,9 +17,21 @@ hameburger.addEventListener('click', onHamburgerClick);
 
 function onHamburgerClick() {
     if (navigation.classList.contains('expanded')) {
-        navigation.classList.remove('expanded');
+        collapseHamburger()
     }
     else {
         navigation.classList.add('expanded');
+    }
+}
+
+function collapseHamburger() {
+    navigation.classList.remove('expanded');
+}
+
+window.addEventListener('resize', onWindowResize);
+
+function onWindowResize() {
+    if (window.innerWidth > 800) {
+        collapseHamburger();
     }
 }

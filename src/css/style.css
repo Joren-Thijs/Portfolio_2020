@@ -4,7 +4,10 @@
 body {
     font-family: 'Muli', sans-serif;
     font-weight: 300;
-    padding: 2.2em 3.6em;
+}
+
+.container {
+    margin: 1em 3.6em;
 }
 
 .clickable {
@@ -30,8 +33,9 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-left: -1.3em;
-    margin-right: -1.2em;
+    margin-top: 1.5em;
+    margin-left: 2.3em;
+    margin-right: 2.4em;
     margin-bottom: 2.5em;
 }
 @media (min-width: 800px) {
@@ -131,6 +135,11 @@ a {
 
 .navigation.expanded {
     margin-bottom: 16em;
+}
+@media (min-width: 800px) {
+    .navigation.expanded {
+        margin-bottom: unset;
+    }
 }
 .navigation.expanded .nav-items {
     -webkit-transform: scale(1, 1);
