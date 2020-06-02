@@ -57,7 +57,6 @@ a {
 @media (min-width: 800px) {
     .navigation {
         height: 2em;
-        margin-bottom: 5em;
     }
 }
 @media (min-width: 800px) {
