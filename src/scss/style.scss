@@ -146,7 +146,7 @@ a {
 .flex-spacer {
     flex: 1;
     @include desktop() {
-        max-width: 500px;
+        max-width: 600px;
      }
 }
 

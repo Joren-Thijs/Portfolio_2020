@@ -162,7 +162,7 @@ a {
 }
 @media (min-width: 800px) {
     .flex-spacer {
-        max-width: 500px;
+        max-width: 600px;
     }
 }
 
