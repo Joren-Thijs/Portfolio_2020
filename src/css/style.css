@@ -5,10 +5,10 @@ body {
     font-family: 'Muli', sans-serif;
     font-weight: 300;
     display: grid;
-    grid-template: '. navbar .' 2em '. container .' auto/minmax(3.6em, 1fr) auto minmax(
+    grid-template: '. navbar .' minmax(2em, 1fr) '. container .' auto/minmax(
             3.6em,
             1fr
-        );
+        ) auto minmax(3.6em, 1fr);
 }
 
 .container {
@@ -51,7 +51,8 @@ a {
     margin-top: 2.7em;
     margin-left: -1.4em;
     margin-right: -1.5em;
-    margin-bottom: 2.5em;
+    margin-bottom: -26em;
+    max-height: 2em;
 }
 @media (min-width: 800px) {
     .navigation {
@@ -150,7 +151,7 @@ a {
 }
 
 .navigation.expanded {
-    margin-bottom: 16em;
+    margin-bottom: 13em;
 }
 @media (min-width: 800px) {
     .navigation.expanded {
