@@ -131,9 +131,22 @@ function bundleImages() {
     return (
         gulp
             // Locate Images
-            .src('./src/images/**/*.+(png|jpg|jpeg|gif|svg)')
+            .src('./src/images/**/*.+(png|jpg|jpeg)')
             // Minify images and cache them for better performance
             .pipe(cache(imageMin()))
+            // Save the Images
+            .pipe(gulp.dest('./dist/images'))
+    );
+}
+
+/**
+ * Publish svg icons to the './dist' folder
+ */
+function bundleIcons() {
+    return (
+        gulp
+            // Locate Images
+            .src('./src/images/**/*.+(svg)')
             // Save the Images
             .pipe(gulp.dest('./dist/images'))
     );
@@ -212,13 +225,13 @@ exports.watch = watch;
 exports.release = gulp.series(
     compileSass,
     clearDist,
-    gulp.parallel(bundleHTML, bundleImages, bundleDownloads, bundleFonts)
+    gulp.parallel(bundleHTML, bundleImages, bundleIcons, bundleDownloads, bundleFonts)
 );
 exports.releaseAll = gulp.series(
     clearCache,
     compileSass,
     clearDist,
-    gulp.parallel(bundleHTML, bundleImages, bundleDownloads, bundleFonts)
+    gulp.parallel(bundleHTML, bundleImages, bundleIcons, bundleDownloads, bundleFonts)
 );
 exports.clearCache = clearCache;
 exports.clearDist = clearDist;
