@@ -166,6 +166,18 @@ function bundleDownloads() {
 }
 
 /**
+ * Publish downloadable content to the './dist' folder
+ */
+function bundleManifest() {
+    return (
+        gulp
+            // Locate content
+            .src('./src/*.webmanifest')
+            .pipe(gulp.dest('./dist'))
+    );
+}
+
+/**
  * Clear the gulp-cache
  */
 function clearCache() {
@@ -225,13 +237,13 @@ exports.watch = watch;
 exports.release = gulp.series(
     compileSass,
     clearDist,
-    gulp.parallel(bundleHTML, bundleImages, bundleIcons, bundleDownloads, bundleFonts)
+    gulp.parallel(bundleHTML, bundleImages, bundleIcons, bundleDownloads, bundleManifest, bundleFonts)
 );
 exports.releaseAll = gulp.series(
     clearCache,
     compileSass,
     clearDist,
-    gulp.parallel(bundleHTML, bundleImages, bundleIcons, bundleDownloads, bundleFonts)
+    gulp.parallel(bundleHTML, bundleImages, bundleIcons, bundleDownloads, bundleManifest, bundleFonts)
 );
 exports.clearCache = clearCache;
 exports.clearDist = clearDist;
