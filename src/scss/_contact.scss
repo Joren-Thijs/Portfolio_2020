@@ -1,0 +1,105 @@
+.contact-container {
+    grid-area: container;
+    display: grid;
+    grid-template:
+    'content' auto
+    'image' auto
+    / minmax(10em, 35em);
+    @include desktop() {
+        margin-top: 6em;
+        grid-template:
+        'content . image' auto
+        / auto minmax(0.5em, 15em) auto;
+    }
+}
+
+.contact-left-column {
+    grid-area: content;
+    @include desktop() {
+        max-width: 23em;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: flex-start;
+    }
+}
+
+.contact-main-title {
+    color: textColor(primary-color);
+    font-weight: 300;
+    @include desktop() {
+        display: none;
+    }
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .contact-item-image {
+        margin-right: 1em;
+        min-width: 2em;
+        width: 2em;
+        filter: invert(27%) sepia(8%) saturate(3%) hue-rotate(314deg) brightness(98%) contrast(81%);
+    }
+
+    .contact-sub-title {
+        overflow-wrap: break-word;
+        word-break: break-all;
+        min-width: 7em;
+    }
+}
+
+.contact-sub-title {
+    color: textColor(secondary-text);
+    font-weight: 300;
+    margin: 0.9em 0;
+    max-width: $max-width-mobile;
+    @include desktop() {
+        margin: 0.6em auto;
+        margin-left: 0;
+    }
+}
+
+.contact-introduction {
+    color: textColor(secondary-text);
+    font-size: 1em;
+    margin: 0.9em auto;
+    margin-bottom: 2.5em;
+    max-width: $max-width-mobile;
+    @include desktop() {
+        margin: 0.6em auto;
+    }
+}
+
+.contact-learn-more {
+    color: $primary-pink;
+    white-space: nowrap;
+    &:hover {
+        color: $primary-blue;
+    }
+}
+
+.contact-buttons {
+    margin-top: 2em;
+}
+
+.contact-hero-image-container{
+    grid-area: image;
+    position: relative;
+    .contact-hero-image {
+        width: 100%;
+        @include desktop() {
+            width: 22em;
+        }
+    }
+
+    .contact-hero-image-ref {
+        font-size: .8em;
+        color: textColor(faded-text);
+        position: absolute;
+        bottom: -1.5em;
+        right: 0;
+    }
+}
