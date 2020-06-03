@@ -175,6 +175,10 @@ a:active {
     flex: 1;
 }
 
+.mb-3 {
+    margin-bottom: 3em;
+}
+
 .primary-action-large {
     color: #ffffff;
     font-size: 1.8em;
@@ -336,8 +340,8 @@ a:active {
 .home-introduction {
     color: #6d6a6a;
     font-size: 1em;
-    margin-bottom: 2.5em;
     margin: 0.9em auto;
+    margin-bottom: 2.5em;
     max-width: 520px;
 }
 @media (min-width: 800px) {
@@ -495,12 +499,12 @@ a:active {
 .about-container {
     grid-area: container;
     display: grid;
-    grid-template: 'content' auto 'image' auto / auto;
+    grid-template: 'left' auto 'right' auto / auto;
 }
 @media (min-width: 800px) {
     .about-container {
         margin-top: 6em;
-        grid-template: 'content . image' auto/auto minmax(0.5em, 15em) auto;
+        grid-template: 'left . right' auto/auto minmax(0.5em, 15em) auto;
     }
 }
 
@@ -514,7 +518,7 @@ a:active {
 }
 
 .about-left-column {
-    grid-area: content;
+    grid-area: left;
 }
 @media (min-width: 800px) {
     .about-left-column {
@@ -537,10 +541,8 @@ a:active {
 
 .about-main-title {
     color: #424242;
-    font-size: 1.6em;
     line-height: 1.5em;
     margin: 0.9em auto;
-    max-width: 520px;
 }
 @media (min-width: 800px) {
     .about-main-title {
@@ -549,10 +551,9 @@ a:active {
 }
 
 .about-sub-title {
-    color: #6d6a6a;
-    font-size: 1.3em;
+    color: #424242;
     margin: 0.9em auto;
-    max-width: 520px;
+    font-weight: 300;
 }
 @media (min-width: 800px) {
     .about-sub-title {
@@ -563,9 +564,8 @@ a:active {
 
 .about-introduction {
     color: #6d6a6a;
-    font-size: 1em;
-    margin-bottom: 2.5em;
     margin: 0.9em auto;
+    margin-bottom: 2.5em;
     max-width: 520px;
 }
 @media (min-width: 800px) {
@@ -574,24 +574,47 @@ a:active {
     }
 }
 
-.about-hero-image-container {
-    grid-area: image;
-    position: relative;
+.about-skills-title {
+    font-weight: 300;
+    margin: 0.7em 0;
+}
+
+.about-skills-description {
+    color: #6d6a6a;
+    font-size: 0.9em;
+    margin: 0.2em 0;
+    max-width: 520px;
 }
 @media (min-width: 800px) {
-    .about-hero-image-container {
+    .about-skills-description {
+        margin: 0.6em auto;
+    }
+}
+
+.about-right-column {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    grid-area: right;
+}
+.about-right-column .about-hero-image-container {
+    position: relative;
+    display: none;
+}
+@media (min-width: 800px) {
+    .about-right-column .about-hero-image-container {
+        display: unset;
         max-width: unset;
     }
 }
-.about-hero-image-container .about-hero-image {
+.about-right-column .about-hero-image-container .about-hero-image {
     width: 100%;
 }
 @media (min-width: 800px) {
-    .about-hero-image-container .about-hero-image {
+    .about-right-column .about-hero-image-container .about-hero-image {
         width: 22em;
     }
 }
-.about-hero-image-container .about-hero-image-ref {
+.about-right-column .about-hero-image-container .about-hero-image-ref {
     font-size: 0.8em;
     color: #7e7e7e;
     position: absolute;
