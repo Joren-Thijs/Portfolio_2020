@@ -342,7 +342,6 @@ a:active {
     color: #6d6a6a;
     font-size: 1em;
     margin: 0.9em auto;
-    margin-bottom: 2.5em;
     max-width: 520px;
 }
 @media (min-width: 800px) {
@@ -357,6 +356,10 @@ a:active {
 }
 .home-learn-more:hover {
     color: #1f6aff;
+}
+
+.home-buttons {
+    margin-top: 2.5em;
 }
 
 .home-hero-image-container {
