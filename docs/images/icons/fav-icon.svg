@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.234" y1="0.085" x2="0.821" y2="0.865" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1f6aff"/>
+      <stop offset="1" stop-color="#fd2dee"/>
+    </linearGradient>
+  </defs>
+  <g id="fav-icon" transform="translate(-335 -14)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="13" cy="13" r="13" transform="translate(335 14)" fill="url(#linear-gradient)"/>
+    <text id="JT" transform="translate(341 33)" fill="#fff" font-size="16" font-family="NirmalaUI, Nirmala UI"><tspan x="0" y="0">JT</tspan></text>
+  </g>
+</svg>
